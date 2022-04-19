@@ -1,0 +1,45 @@
+citeulike
+learning_rate=0.02
+drop_out=0.3
+smooth_ratio=0.3
+beta=5.0
+loss='adaptive'
+200 epochs
+
+ml-1m
+learning_rate=7.5
+drop_out=0.5
+smooth_ratio=0.05, rough_ratio=0.005
+beta=4.0
+loss='adaptive'
+90 epochs
+
+ml-100k
+learning_rate=2.0
+drop_out=0.2
+smooth_ratio=0.2, rough_ratio=0.002
+beta=4.0
+loss='bpr'
+50 epochs
+
+pinterest
+learning_rate=0.85/0.12
+drop_out=0.2
+smooth_ratio=0.2
+beta=4.0/5.0
+loss='adaptive'
+200+ epochs
+
+gowalla
+learning_rate=0.03
+drop_out=0.1
+smooth_ratio=0.1
+beta=5.0
+loss='adaptive'
+160 epochs
+
+Notes
+1. The learning rate is set larger than the regular settings reported in other paper. We speculate that the reason is that most paper use ADAM, while we want to focus on the algorithm instead of optimizer and use a simpler optmizer SGD. 
+2. drop_out might result in unstable training. If 'nan' loss shows up, reduce the learning rate or drop_ratio.
+3. rough spectral features does not contribute to accuracy with a clear improvement in most cases, it is fine to only use smoothed features.
+4  The quality of the spectral features might vary on different environments (especially GPU), the accuracy might be a little bit different from that reported in the paper. 
