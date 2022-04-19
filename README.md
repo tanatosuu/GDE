@@ -9,7 +9,7 @@ The algorithm is implemented in Python 3.8.5, with the following libraries addit
 
 Due to the inefficiency of CPU, we only provide a GPU implementation. Feel free to modify the codes to adapt to your own environment.
 
-# Get Startted
+# Get Started
 
 Two steps to run the algorithm:<br/>
 1. Run preprocess.py to generate the required spectral features for the dataset. You can change the number of smoothed spectral features by adjusting 'smooth_ratio'; similarly, by adjusting 'rough_ratio', you change the number of rough spectral features.
