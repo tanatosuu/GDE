@@ -42,4 +42,5 @@ Notes
 1. The learning rate is set larger than the regular settings reported in other paper. We speculate that the reason is that most paper use ADAM, while we want to focus on the algorithm instead of optimizer and use a simpler optmizer SGD. 
 2. drop_out might result in unstable training. If 'nan' loss shows up, reduce the learning rate or drop_ratio.
 3. rough spectral features does not contribute to accuracy with a clear improvement in most cases, it is fine to only use smoothed features.
-4  The quality of the spectral features might vary on different environments (especially GPU), the accuracy might be a little bit different from that reported in the paper. 
+4. The quality of the spectral features might vary on different environments (especially GPU), the accuracy might be a little bit different from that reported in the paper.
+5. We used a simpler weighting function (i.e., only exponential part) in the released version. The term considering the effect from user/item varies on different datasets and requires additional hyperparameter tuning, and does not show a very clear improvment compared with a function without it.
