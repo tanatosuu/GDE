@@ -122,7 +122,7 @@ class GDE(nn.Module):
 			out=((final_user*final_pos).sum(1)-nega_weight*res_nega).sigmoid()
 
 		else:	
-			out=((final_user*final_pos).sum(1)-(final_pos*final_nega).sum(1)).sigmoid()
+			out=((final_user*final_pos).sum(1)-(final_user*final_nega).sum(1)).sigmoid()
 
 		reg_term=self.reg*(final_user**2+final_pos**2+final_nega**2).sum()
 		return (-torch.log(out).sum()+reg_term)/batch_size
