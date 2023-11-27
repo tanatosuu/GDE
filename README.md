@@ -14,7 +14,7 @@ Due to the inefficiency of CPU, we only provide a GPU implementation. Feel free 
 # Get Started
 
 Two steps to run the GDE algorithm:<br/>
-1. Run preprocess.py to generate the required spectral features for the dataset. You can change the number of smoothed spectral features by adjusting 'smooth_ratio'; similarly, by adjusting 'rough_ratio', you change the number of rough spectral features.
+1. Run preprocess_gde.py to generate the required spectral features for the dataset. You can change the number of smoothed spectral features by adjusting 'smooth_ratio'; similarly, by adjusting 'rough_ratio', you change the number of rough spectral features.
 2. Run GDE.py to generate the accuracy on test sets. Explanation on hyperparameters is provided in the codes.
 
 Similarly, two steps for SGDE algorithms.
