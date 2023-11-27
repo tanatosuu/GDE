@@ -180,5 +180,5 @@ exit()
 
 
 output=pd.DataFrame(result)
-output.to_csv(r'./svd_gcn_b.csv')
+output.to_csv(r'./csgde.csv')
 
